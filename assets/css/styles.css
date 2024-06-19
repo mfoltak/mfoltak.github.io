@@ -2,7 +2,7 @@
 
 /* Variables */
 :root {
-  --font-family: "Roboto", sans-serf;
+  --font-family: "Roboto", sans-serif;
   --normal-font: 400;
   --bold-font: 700;
   --bolder-font: 900;
@@ -27,7 +27,6 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* border: 2px solid red; */
 }
 
 ul {
@@ -48,8 +47,8 @@ body {
 }
 
 section {
-  /* max-width: 1100px;
-  margin: auto; */
+  max-width: 1100px;
+  margin: auto;
 }
 
 /* CSS Resets end */
@@ -76,6 +75,7 @@ nav a {
   color: var(--primary-color);
   transition: var(--transition);
 }
+
 nav a:hover {
   color: var(--secondary-color);
   border-bottom: 2px solid var(--secondary-color);
@@ -108,6 +108,7 @@ nav ul li {
   gap: 2.5rem;
   max-width: 68.75rem;
   margin: auto;
+  padding-top: 2.5rem;
 }
 
 .hero img {
@@ -178,18 +179,7 @@ nav ul li {
 .projects {
   background-color: var(--bg-color);
   padding: 32px 0;
-  margin-top: 2rem;
-}
-
-.project-pic {
-  width: 65%;
-  height: 60%;
-}
-
-.projects-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  margin-top: 1rem;
 }
 
 .projects-title {
@@ -197,14 +187,27 @@ nav ul li {
   margin-bottom: 1rem;
 }
 
-.project-container {
-  text-align: center;
-  width: 21.875rem;
-  padding: 1rem;
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  max-width: 1100px; /* Adjust as needed */
+  margin: auto;
 }
 
-.project-container p {
-  padding: 0.4rem;
+.project-container {
+  text-align: center;
+  padding: 1rem;
+  box-sizing: border-box;
+  margin: 1rem; /* Added margin for spacing */
+  background-color: #fff;
+  border-radius: 11px;
+  box-shadow: 0 3px 10px var(--primary-shadow);
+}
+
+.project-pic {
+  width: 100%;
+  height: auto; /* Ensure the images scale correctly */
 }
 
 .project-title {
@@ -216,6 +219,75 @@ nav ul li {
 }
 
 /* Projects section ends */
+
+/*trying something out*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+body {
+  font-family: 'Roboto', sans-serif;
+  
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  text-align: center;
+  padding: 20px 0;
+  color: #4756df;
+}
+
+.timeline {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.timeline-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  
+}
+
+.timeline-item {
+  background-color: #ededed;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  position: relative;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  width: 6px;
+  height: 100%;
+  
+}
+
+.timeline-content {
+  padding-left: 40px;
+}
+
+.timeline-content h3 {
+  font-size: 1.5em;
+  margin-bottom: 5px;
+}
+
+.timeline-content p, .timeline-content span {
+  font-size: 1em;
+  color: #333;
+}
+
+.timeline-content span {
+  font-weight: bold;
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 
 /* Contacts section */
 .contact {
@@ -336,11 +408,31 @@ footer {
   margin: 10px;
 }
 
+/* Button Styling */
+#download-resume-btn {
+  display: block;
+  margin: 0 auto; /* Center the button horizontally */
+  padding: 20px 40px; /* Adjust padding to make the button bigger */
+  margin-top: 40px;
+  font-size: 18px; /* Increase font size */
+  background-color: var(--primary-color); /* Primary color background */
+  color: white; /* White text color */
+  border: none; /* Remove border */
+  border-radius: 8px; /* Add border radius for rounded corners */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  transition: background-color 0.3s; /* Smooth transition for background color change */
+}
+
+#download-resume-btn:hover {
+  background-color: #1b2bb3; /* Darker color on hover */
+}
+
 /* Media queries for responsiveness */
-@media screen and (max-width: 720px) {
-  nav {
-    padding: 1.5rem 1rem;
+@media screen and (max-width: 900px) {
+  .projects-container {
+    grid-template-columns: repeat(2, 1fr);
   }
+
   nav ul {
     position: fixed;
     background-color: var(--bg-color);
@@ -412,10 +504,9 @@ footer {
   }
 }
 
-@media screen and (max-width: 420px) {
-  .hero img {
-    height: 20rem;
-    width: 10rem;
+@media screen and (max-width: 600px) {
+  .projects-container {
+    grid-template-columns: 1fr;
   }
 
   .bio {
@@ -430,3 +521,21 @@ footer {
     max-width: 17.75rem;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .timeline-container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+  .timeline-item::after {
+    left: -13px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
