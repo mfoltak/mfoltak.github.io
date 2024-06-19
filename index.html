@@ -35,7 +35,7 @@
       <h1>MELANIE FOLTAK</h1>
       <ul class="navigation">
         <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#work" class="nav-link">Experience</a></li>
+        <li><a href="#timeline" class="nav-link">Experience</a></li>
         <li><a href="#projects" class="nav-link">Projects</a></li>
         <li><a href="#skills" class="nav-link">Skills</a></li>
       </ul>
@@ -58,142 +58,225 @@
         <h2 class="bio-title">About Me</h2>
         <p class="bio-text">
           Hi, I'm Melanie. I’m a software engineering student at the University of Waterloo and 
-          passionate about using software to positively change the world.
-          I'm currently seeking a Summer 2024 internships and would love to connect about any opportunities.
+          passionate about using software to positively change the world. I have previously backend expereince at 
+          TD Bank, Toronto Transit Commission, and Hamburg University of Technology. I love playing with innovative 
+          technology like VR headsets, ML, and robot dogs! 
+          I'm currently seeking a Winter 2025 internships and would love to connect!
         </p>
       </div>
     </section>
 
-    <!-- More about -->
-    <br>
-    <section class="more-about" id="work">
-      <h2 m>Experience</h2>
-      <p>
+    
+    <!-- Resume Download Button -->
+<button id="download-resume-btn">DOWNLOAD MY RESUME HERE</button>
 
+<!-- Hidden link for resume download -->
+<a href="Melanie Foltak - 3B.pdf" download id="resume-download-link" style="display: none;"></a>
+
+    <!-- Projects section -->
+<section class="projects" id="projects">
+  <h2 class="projects-title">Projects</h2>
+  <div class="projects-container">
+    <div class="project-container project-card">
+      <img
+        src="assets/images/plannect.jpg"
+        alt="Plannect Image"
+        loading="lazy"
+        class="project-pic"
+      />
+      <h3 class="project-title">AI Social Media</h3>
+      <p class="project-details">
+        Plannect is an <b>AI-powered</b> platform that helps individuals who are excited to learn connect with local
+        experts in their area. Plannect uses <b>OpenAI(GPT-3), Typeform API, </b>and <b>Mapbox API </b>with the help of Autocode to
+        match nearby individuals with similar interests.
       </p>
-      <div style="display: flex; justify-content: space-between;">
-        <h3 style="text-align:left; flex: 1;">Toronto Dominion | Conversational AI Developer</h3>
-        <h3 style="text-align:right;">September 2023 - December 2023</h3>
+      <a href="https://devpost.com/software/plannect" target="_blank" class="project-link">Check it Out</a>
     </div>
-    <p>
-      - Automated comparison of training and test data in Python with chi-squared test, <b>reducing manual workload by 8 hrs</b>
-    <br>
-      - Optimized performance summary generation process for <b>13 chatbots</b> by incorporating <b>data extraction and manipulation</b> methods resulting in transitioning a monthly human-driven activity to a <b>30 mins automated workflow</b>
-    <br>
-      - Deployed <b>480 use cases</b> utilizing tokenization techniques and creative dialogue flows in <b>Java</b> to process user inputs
-    <br>
-    </p>
-    
-    <div style="display: flex; justify-content: space-between;">
-      <h3 style="text-align:left; flex: 1;">Toronto Dominion | VR Developer</h3>
-      <h3 style="text-align:right;">January 2023 - April 2023</h3>
+    <div class="project-container project-card">
+      <img
+        src="assets/images/type3.jpg"
+        alt="AI Garbage Sorter"
+        loading="lazy"
+        class="project-pic"
+      />
+      <h3 class="project-title">AI Garbage Sorter</h3>
+      <p class="project-details">
+        All in Good Waste is an image analysis feature which uses <b>ML</b> to categorize recycling with <b>94% accuracy.</b>
+        Programmed a Raspberry Pi and camera attached to stepper motors with <b>Python</b> to create a robotic arm 
+        that automates the sorting and disposing procedure.
+      </p>
+      <a href="https://github.com/mfoltak/All-In-Good-Waste" target="_blank" class="project-link">Check it Out</a>
+    </div>
+    <div class="project-container project-card">
+      <img
+        src="assets/icons/card.png"
+        alt="SnapSpeak Image"
+        loading="lazy"
+        class="project-pic"
+      />
+      <h3 class="project-title">Credit Card Reward Points</h3>
+      <p class="project-details">
+        Developed a Credit Card Reward Points System, aiming to calculate monthly rewards points based on customers' purchases. 
+        System applies various reward calculation rules to maximize points earned, considering different priorities and combinations of rules for each transaction.
+      </p>
+      <a href="https://github.com/mfoltak/Banking-Point-System" target="_blank" class="project-link">Check it Out</a>
+    </div>
+    <div class="project-container project-card">
+      <img
+        src="assets/images/amazon.png"
+        alt="Amazon Web Scraper Image"
+        loading="lazy"
+        class="project-pic"
+      />
+      <h3 class="project-title">Amazon Web Scraper</h3>
+      <p class="project-details">
+        Used <b>BeautifulSoup</b> to <b>scrape Amazon</b> for the best price-to-star ratio. Opens the best product page in a web browser for easy access.
+      </p>
+      <a href="https://github.com/mfoltak/Amazon-Web-Scaper" target="_blank" class="project-link">Check it Out</a>
+    </div>
+    <div class="project-container project-card">
+      <img
+        src="assets/images/walk.png"
+        alt="Walk-It Image"
+        loading="lazy"
+        class="project-pic"
+      />
+      <h3 class="project-title">Walk It</h3>
+      <p class="project-details">
+        <b>AWS Web Application</b> that takes in how many mintues you were walking and returns the number of calories burnt.
+        Utilized AWS Amplify, AWS Lambda, Amazon API Gateway, Amazon DynamoDB, and AWS Identity & Access Management (IAM).
+      </p>
+      <a href="https://github.com/mfoltak/AWS_Walk_It" target="_blank" class="project-link">Check it Out</a>
+    </div>
+    <div class="project-container project-card">
+      <img
+        src="assets/icons/french.png"
+        alt="SnapSpeak Image"
+        loading="lazy"
+        class="project-pic"
+      />
+      <h3 class="project-title">French Language Learner</h3>
+      <p class="project-details">
+        Orchestrated a <b>Swift Playground app</b>, employing <b>SwiftUI</b>
+        and <b>AVFoundation</b> to deliver a multimodal language learning experience with both educational and test modes, 
+        integrating interactive photo and voice import features.
+      </p>
+      <a href="https://github.com/mfoltak/SnapSpeak" target="_blank" class="project-link">Check it Out</a>
+    </div>
   </div>
-  <p>
-    - Leveraged <b>Pandas</b> to create custom pivot tables, analyzing data for <b>94,000+ employees</b> to summarize FinTech trends
-    <br>
-    - Developed <b>Python</b> scripts to parse and evaluate 50+ resumes using <b>NLP</b> via cosine similarity test for candidate ranking\
-    <br>
-    - Designed <b>4 VR games</b> and training exercises using <b>C#</b> and <b>Unity</b> to implement 3D game mechanics and interactive player features convincing stakeholders to transform the onboarding process for the Software Engineering Practice 
-    <br>
-    - Deployed real-world 3D objects to ShapesXR using Polycam, architecting a proof of concept for TD’s Global VR meetup space, reducing travel costs and increasing investment in VR technologies 
-    <br>
-  </p>
-    
-
-    <div style="display: flex; justify-content: space-between;">
-      <h3 style="text-align:left; flex: 1;">Toronto Transit Commission | Software Developer</h3>
-      <h3 style="text-align:right;">May 2022 - August 2022</h3>
-  </div>
-  <p>
-    - Architected a <b>VB.NET script</b> to remotely automate Microsoft updates and deployed improved changes to entire firm
-    <br>
-    - Employed a new object-oriented design and integrated additional features <b>improving performance speed by 41%</b>
-    <br>
-    - Refactored legacy code for updating computer driver packs and registries for 6 departments enhancing usability
-    <br>
-    - Created a developer's guide to increase future intern productivity and <b>decrease training time by 46%</b>
-  </p>
-   
-
-    <div style="display: flex; justify-content: space-between;">
-      <h3 style="text-align:left; flex: 1;">Co-Chair | Woman in Computer Science Club</h3>
-      <h3 style="text-align:right;">December 2021 - Present</h3>
-  </div>
-  <p>
-- Conceptualized new initiatives liaising connections between 3 organizations and 1600+ women in technology
-    <br>
-- Organized bi-weekly events for women in computing at the University of Waterloo while <b>leading 11 undergrad committee </b>members to help women and non-binary students network prepare for successful careers in tech
-    <br>
--Ran 24 events promoting diversity and inclusion while <b>increasing participation by 300%</b> from previous semesters
-  </p>
-
-  <div style="display: flex; justify-content: space-between;">
-    <h3 style="text-align:left; flex: 1;">Woman in Computer Science Club | Co-Chair</h3>
-    <h3 style="text-align:right;">December 2021 - Present</h3>
-</div>
-<p>
-- Created and delivered 26 diverse programming lessons utilizing Scratch and Microbit for classes of 30 students
-  <br>
-- Taught programming logic through innovative problem-solving methods, <b>increasing number of participants by 15%</b>
-  <br>
-- Managed daily operations of 2 employees who created presentations for the “All Girls Week” initiative
-</p>
+</section>
 
 
-    </section>
+<!-- Testing something out -->
 
-    
-        <!-- Projects section -->
-        <section class="projects" id="projects">
-          <h2 class="projects-title">Projects</h2>
-          <div class="projects-container">
-            <div class="project-container project-card">
-              <img
-                src="assets/images/plannect.jpg"
-                alt="Plannect Image"
-                loading="lazy"
-                class="project-pic"
-              />
-              <h3 class="project-title">AI Social Media</h3>
-              <p class="project-details">
-                Plannect is an <b>AI-powered</b> platform that helps individuals who are excited to learn connect with local
-                experts in their area. Plannect uses <b>OpenAI(GPT-3), Typeform API, </b>and <b>Mapbox API </b>with the help of Autocode to
-                match nearby individuals with similar interests.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Work Experience Timeline</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <section class="timeline" id="timeline">
+    <h2>Experience</h2>
+    <div class="timeline-container">
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <h3>AI Developer</h3>
+          <p>Hamburg University of Technology</p>
+          <span>May 2024 - August 2024</span>
+          <p>
+            - Created a <b>Python</b> based localization system using <b>ultra-wideband sensors</b> for precise tracking of <b>quadruped robots</b>
+          <br>
+            - Engineered a <b>vision-based AI system</b> for real-time detection and classification of electrical ports, enabling automated probing of electrical ports for inspection of civil infrastructure
+          <br>
+          </p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <h3>Conversational AI Developer</h3>
+          <p>Toronto Dominion Bank</p>
+          <span>September 2023 - December 2023</span>
+          <p>
+            - Automated comparison of training and test data in Python with chi-squared test, <b>reducing manual workload by 8 hrs</b>
+          <br>
+            - Optimized performance summary generation process for <b>13 chatbots</b> by incorporating <b>data extraction and manipulation</b> methods resulting in transitioning a monthly human-driven activity to a <b>30 mins automated workflow</b>
+          <br>
+            - Deployed <b>480 use cases</b> utilizing tokenization techniques and creative dialogue flows in <b>Java</b> to process user inputs
+          <br>
+          </p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <h3>VR Developer</h3>
+          <p>Toronto Dominion Bank</p>
+          <span>January 2023 - April 2023</span>
+          <p>
+            - Leveraged <b>Pandas</b> to create custom pivot tables, analyzing data for <b>94,000+ employees</b> to summarize FinTech trends
+            <br>
+            - Developed <b>Python</b> scripts to parse and evaluate 50+ resumes using <b>NLP</b> via cosine similarity test for candidate ranking
+            <br>
+            - Designed <b>4 VR games</b> and training exercises using <b>C#</b> and <b>Unity</b> to implement 3D game mechanics and interactive player features convincing stakeholders to transform the onboarding process for the Software Engineering Practice 
+            <br>
+            - Deployed real-world 3D objects to ShapesXR using Polycam, architecting a proof of concept for TD’s Global VR meetup space, reducing travel costs and increasing investment in VR technologies 
+            <br>
+          </p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <h3>Software Developer</h3>
+          <p>Toronto Transit Commission</p>
+          <span>May 2022 - August 2022</span>
+          <p>
+            - Architected a <b>VB.NET script</b> to remotely automate Microsoft updates and deployed improved changes to entire firm
+            <br>
+            - Employed a new object-oriented design and integrated additional features <b>improving performance speed by 41%</b>
+            <br>
+            - Refactored legacy code for updating computer driver packs and registries for 6 departments enhancing usability
+            <br>
+            - Created a developer's guide to increase future intern productivity and <b>decrease training time by 46%</b>
+          </p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <h3>Technical Project Manager</h3>
+          <p>Operating Systems Power Saving</p>
+          <span>January 2024 - April 2024</span>
+          <p>
+            - Led a team of 15 undergraduate researchers, achieving a <b>25% reduction in timelines</b> through agile project planning
+            <br>
+            - Contributed to technical research and analysis on power-saving techniques that <b>extended battery life by 1 hour</b>
+            <br>
+          </p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <h3>Co-Chair</h3>
+          <p>Woman in Computer Science Club</p>
+          <span>December 2021 - April 2024</span>
+          <p>
+            - Organized bi-weekly events for <b>1600+ women in computing</b> while <b>leading 11 undergrad committee </b>members
+                <br>
+            - Maintained and updated club’s website, increasing accessibility by implementing engaging features with <b>React</b>
+                <br>
+            -Ran 27 events promoting diversity and inclusion while <b>increasing participation by 300%</b> from previous semesters
               </p>
-              <a href="https://devpost.com/software/plannect" target="_blank" class="project-link">Check it Out</a>
-            </div>
-            <div class="project-container project-card">
-              <img
-                src="assets/images/type3.jpg"
-                alt="AI Garbage Sorter"
-                loading="lazy"
-                class="project-pic"
-              />
-              <h3 class="project-title">AI Garbage Sorter</h3>
-              <p class="project-details">
-              All in Good Waste is an image analysis feature which uses <b>ML</b> to categorize recycling with <b>94% accuracy.</b>
-              Programmed a Raspberry Pi and camera attached to stepper motors with <b>Python</b> to create a robotic arm 
-              that automates the sorting and disposing procedure.
-              </p>
-              <a href="https://github.com/mfoltak/All-In-Good-Waste" target="_blank" class="project-link">Check it Out</a>
-            </div>
-          </div>
-            <div class="project-container project-card">
-              <img
-                src="assets/images/plannect.jpg"
-                alt="SnapSpeak Image"
-                loading="lazy"
-                class="project-pic"
-              />
-              <h3 class="project-title">French Language Learner</h3>
-              <p class="project-details">
-                Orchestrated a <b>Swift Playground app</b>, employing <b>SwiftUI</b>
-                and <b>AVFoundation</b> to deliver a multimodal language learning experience with both educational and test modes, 
-                integrating interactive photo and voice import features
-              </p>
-              <a href="https://devpost.com/software/plannect" target="_blank" class="project-link">Check it Out</a>
-            </div>
-        </section>
+        </div>
+      </div>
+      
+      <!-- Add more as needed -->
+    </div>
+  </section>
+</body>
+</html>
+
+        
 
     <!-- Skills section -->
     <section class="skills" id="skills">
@@ -292,5 +375,11 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
+    <script>
+      document.getElementById('download-resume-btn').addEventListener('click', function() {
+        var downloadLink = document.getElementById('resume-download-link');
+        downloadLink.click();
+      });
+    </script>    
   </body>
 </html>
